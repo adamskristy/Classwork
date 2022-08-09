@@ -1,0 +1,5 @@
+1. mkdir galaxy-far-far-away, cd galaxy-far-far-away/, touch commands.txt
+
+2.
+
+
