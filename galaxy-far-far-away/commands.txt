@@ -1,5 +1,14 @@
-1. mkdir galaxy-far-far-away, cd galaxy-far-far-away/, touch commands.txt
+Setup
+mkdir galaxy-far-far-away, cd galaxy-far-far-away/, touch commands.txt
 
-2.
+2. mkdir death_star, touch luke.txt. touch ben_kenodi.txt
+
+3. cd tatooine, mkdir millenium_falcon, cd millenium_falcon, touch han_solo.txt, touch chewbaca.txt
+
+4. mv ben_kenobi.txt obi_wan.txt
+
+5. cp ./death_star/storm_trooper.txt ./tatooine
+
+6. 
 
 
