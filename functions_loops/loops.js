@@ -15,7 +15,7 @@
 
 //statement 3:
 //incrementing of the variable in order to eventually break the loop
-//"i++" , i increases by 1
+//"i++" , i increases by 1, terminating condition
 
 //1: declare and initialize
 //2: check if condition is true
@@ -119,10 +119,10 @@
 //     console.log(i+=3) //not outputtting interger so keeps going to 36
 // } // code goes to 36 in this format
 
-// let interger = 0;
+// let interger = 0; //set start number at 0
 // while (interger < 35){ //only looks for intergers less than 35
-//     console.log (interger)
-//     interger += 3
+//     console.log (interger) //prints number
+//     interger += 3        //increments number by 3
 // } // code stops at 33
 
 // let integer = 0;
@@ -133,18 +133,41 @@
 
 
 //multiples of 5
-// let int = 0;
-// while (int < 100){
-//     console.log (int)
-//     int += 5
-//} // code stops at 33
+let int = 0;
+while (int < 100){
+    console.log (int)
+    int += 5
+} 
 
 
 //print 0 - 20 divde 2 time 3
 
-let banana = 0;
-while (banana < 21 ){ //set banana range 0 - 20
-    if (banana % 2 == 0) {  // if banana is able to be divided by 2 with zero remainder,
-        console.log(banana * 3)  //then times by 3
-    }banana++ //why is this out here? not sure...
+// let banana = 0;
+// while (banana < 21 ){ //set banana range 0 - 20
+//     if (banana % 2 == 0) {  // if banana is able to be divided by 2 with zero remainder,
+//         console.log(banana * 3)  //then times by 3
+//     }
+//     banana++ //why is this out here? not sure...
+// }
+
+
+// //print prime numbers between 0 - 20
+
+// let prime = 0; //start of prime numbers is 2
+// while(prime < 20) { //set range btwn 0 - 20
+//     if (prime % prime == 0) //
+//     console.log(prime)
+// } prime++
+
+
+//Bonus
+let num5 = 10
+let coins = 0
+while (num >4){
+    console.log(coins +=4)
+    num5--
 }
+console.log('final' + coins)
+
+
+    
