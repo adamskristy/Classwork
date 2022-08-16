@@ -5,7 +5,7 @@ console.log()
 //log is method and console function?
 
 
-//Function Declartion / Definition
+//Function Declaration / Definition
 function sayHello() { //function keyword (instructions)
     return 'Hello!' //scope
 }
@@ -18,7 +18,7 @@ function sayHello() { //function keyword (instructions)
 //Function Expression,
 //assigning function w/o name
 //cannot be called before they are defined
-const sayHi = function () {
+const sayHi = function () { //the constant sayHi is assigned to be a function
     return 'Hi'  //return sends back value we can use
 }
 
@@ -42,11 +42,11 @@ console.log(sayHey()) /// to call invoke functions, name and ()
 
 //Parameter / arguements
 
-function add(num1, num2) { // () list parameters: space holders
+function add(num1, num2) { // keyword/name( list parameters: space holders)
     return num1 + num2
 }
 
-console.log(add(2, 3)) // () list of arguments: specific values
+console.log(add(2, 3)) // ( list of arguments: specific values)
 console.log(add(5, 5)) 
 console.log (add ('Bob', 'The Builder'))
 
