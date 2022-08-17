@@ -93,7 +93,7 @@
 // }
 // console.log(maxOfThree(12, 26, 42))
 
-// //Exercise 3
+//Exercise 3
 
 // let vowels = ["a", "e", "i","o", "u"]
 //     function isCharAVowel (...vowels){ //insert vowel values
@@ -103,7 +103,7 @@
 //             console.log(false)
 //         }
         
-//     }console.log(isCharAVowel("b"))
+//     }console.log(isCharAVowel("i"))
 
 //check into includes array method or switch statement
 
@@ -253,32 +253,32 @@
 //LOGIC PRACTICE
 
 //Function written
-function fizzBuzz(){
+//function fizzBuzz(){
     //testing the function
     //print numbers 1 - 100 
     //make a for loop
-    for(let i = 1; i <= 100; i++){
+    //for(let i = 1; i <= 100; i++){
         //how to start counting
         //console.log(i)
         //for numbers divisible by 3 print fizz
-        if(i % 3 == 0 && i % 5 != 0){ //if i is divided by 3 and the remainder is zero
+        //if(i % 3 == 0 && i % 5 != 0){ //if i is divided by 3 and the remainder is zero
             //print fizz
-            console.log('Fizz')
-        } else if (i % 5 == 0 && i % 3 != 0){ ///if i is divided by 5 and the remainder is zero
+           // console.log('Fizz')
+        //} else if (i % 5 == 0 && i % 3 != 0){ ///if i is divided by 5 and the remainder is zero
             //print buzz
-            console.log('Buzz')
-        } else if (i % 3 == 0 && i % 5 == 0){
-            console.log('FizzBuzz')
-        } else{
-            console.log(i)
-        }
-    }
+//             console.log('Buzz')
+//         } else if (i % 3 == 0 && i % 5 == 0){
+//             console.log('FizzBuzz')
+//         } else{
+//             console.log(i)
+//         }
+//     }
 
-    //console.log('number')
-}
+//     //console.log('number')
+// }
 
 //call the function
-fizzBuzz();
+//fizzBuzz();
 
 // let n = 0;
 

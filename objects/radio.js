@@ -16,7 +16,7 @@ let radio = {
         ]
     },
     {
-        name: 'nu-jazz',
+        name: 'Nu-jazz',
         song: [{
             title:'Mystline',
             artist:'Nujabes',
@@ -37,8 +37,8 @@ let radio = {
 
 
     useRadio(){
-      let pickStation = Math.floor((Math.random() * 10)) % 2 //variable to pick station
-      let pickSong = Math.floor((Math.random() * 10)) % 3 //variable to pick song
+      let pickStation = Math.floor((Math.random() * 10)) % 2 //variable to pick station , 2 stations
+      let pickSong = Math.floor((Math.random() * 10)) % 3 //variable to pick song, 3 songs
       let pick = radio.stations[pickStation].song[pickSong]
       console.log(`Now Playing ${pick.title} by ${pick.artist}`)
 

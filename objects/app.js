@@ -178,36 +178,35 @@ let obj = {
     
 // }
 
-characterCounter('hello'); // character and how many times
+// characterCounter('hello'); // character and how many times
 
-//output h: 1, e: 1, l: 2, 0: 1
+// //output h: 1, e: 1, l: 2, 0: 1
 
-// * can loop through with for of instead of for loop
-
-
-const string = 'hello'
-console.log(string.split('')) //split
-console.log([...string]) // spread
-//output [ 'h', 'e', 'l', 'l', 'o' ]
+// // * can loop through with for of instead of for loop
 
 
+// const string = 'hello'
+// console.log(string.split('')) //split
+// console.log([...string]) // spread
+// //output [ 'h', 'e', 'l', 'l', 'o' ]
 
-// function count(str){
-//     let obj={};
-//     for(let i=0; i < str.length; i++){
+
+function count(str){
+    let obj={};
+    for(let i=0; i < str.length; i++){
         
-//         let char = str[i]; //character at this index in string
-//          if(obj[char]) {  // if obj
-//             obj[char] ++;
+        let char = str[i]; //character at this index in string
+         if(obj[char]) {  // if obj
+            obj[char] ++;
 
-//         }
-//          else {
-//             obj[char] =1;
-//          }
-//     }
-//         return obj;
-// }
-//   console.log(count("Mississippi"));
+        }
+         else {
+            obj[char] =1;
+         }
+    }
+        return obj;
+}
+  console.log(count("Mississippi"));
 
 //------------------------------------------------
 //see nested pic jade.png
