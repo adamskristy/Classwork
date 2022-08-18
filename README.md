@@ -1,3 +1,8 @@
 #Classwork
 
-practicing command line and git commands with the help of Star Wars
+exercises to help learn JS
+
+File structure
+    app - main file
+    test - instructor notes file
+    misc - named after lab or exercise

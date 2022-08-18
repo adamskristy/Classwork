@@ -51,3 +51,7 @@ radio.useRadio();
 
 //math.random choose random number between 0 and 1
 //math.floor rounds number down to nearest integer
+
+//right now code too strict, have to update if adding more stations and song. How to make more flexible? 
+//See reference code from classmates
+//Will update later

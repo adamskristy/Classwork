@@ -10,97 +10,97 @@
 
 // }
 
-// let cat ={
-//     name: 'Mr. Bean',
-//     fur: 'grey, black, and white',
-//     legs: 4,
-//     canSpeakFrench: false,
-//     //behaviors == functions
-//     meow: function() { // method
-//         console.log('meow');
-//     },
-//     purr: () => {
-//         console.log('purr');
-//     },
-//     talk(speech) { //another way to create a method inside a object
-//         console.log(speech);
-//     }
-// }
+let cat ={
+    name: 'Mr. Bean',
+    fur: 'grey, black, and white',
+    legs: 4,
+    canSpeakFrench: false,
+    //behaviors == functions
+    meow: function() { // method
+        console.log('meow');
+    },
+    purr: () => {
+        console.log('purr');
+    },
+    talk(speech) { //another way to create a method inside a object
+        console.log(speech);
+    }
+}
 
 
 //-------------------------------
 
-// console.log(cat)
-// //output { name: 'Mr. Bean', fur: 'grey, black, and white', legs: 4 }
+console.log(cat)
+//output { name: 'Mr. Bean', fur: 'grey, black, and white', legs: 4 }
 
-// //access property with dot notation
-// console.log(cat.name)
+//access property with dot notation
+console.log(cat.name)
 
-// //can also access properties with []
-// console.log(cat['name'])
+//can also access properties with []
+console.log(cat['name'])
 
-// //when you dont know property name
-// let propName = 'fur'
-// console.log(cat[propName])
+//when you dont know property name
+let propName = 'fur'
+console.log(cat[propName])
 
-// //add properties, dot notation and assignment
-// //also change properties
-// cat.breed = 'calico'
+//add properties, dot notation and assignment
+//also change properties
+cat.breed = 'calico'
 
-// console.log(cat)
-// //output { name: 'Mr. Bean', fur: 'grey, black, and white', legs: 4, breed: 'calico'}
+console.log(cat)
+//output { name: 'Mr. Bean', fur: 'grey, black, and white', legs: 4, breed: 'calico'}
 
-// //if want to add to properties later, make array and add on that way
+//if want to add to properties later, make array and add on that way
 
-// //if add multiple properties with same name, takes the last one, most recent
-
-
-// cat.meow();  //invoke function within object
-// //output meow
-// //method : functions inside of objects?
-// cat.talk('hello');
+//if add multiple properties with same name, takes the last one, most recent
 
 
-// //-------------------------------------------
+cat.meow();  //invoke function within object
+//output meow
+//method : functions inside of objects?
+cat.talk('hello');
 
 
-// if (cat.canSpeakFrench === true) {
-//     console.log('oui')
-// } else {
-//     console.log('no')
-// }
-// //output no
+//-------------------------------------------
 
 
-// for (let i = 0; i < cat.legs; i++){
-//     console.log('LEG')
-// }
-// //output LEG LEG LEG LEG
+if (cat.canSpeakFrench === true) {
+    console.log('oui')
+} else {
+    console.log('no')
+}
+//output no
 
 
-// //check if property exists
-// console.log('Does my cat have legs?')
-// if (cat.science) { //undefined
-//     console.log('oui')
-// } else {
-//     console.log('no')
-// }
-
-// //output no, because.science is not a defined property
-// //if console.log cat.science - undefined
+for (let i = 0; i < cat.legs; i++){
+    console.log('LEG')
+}
+//output LEG LEG LEG LEG
 
 
-// //-----------------------------------------------------------------
+//check if property exists
+console.log('Does my cat have legs?')
+if (cat.science) { //undefined
+    console.log('oui')
+} else {
+    console.log('no')
+}
 
-// //for .... in loop, useful for  objects
+//output no, because.science is not a defined property
+//if console.log cat.science - undefined
 
 
-// for (let key in cat) {  //key represents ... fur, name, legs, age, meow
-//     console.log('key: ', key)
-//     //prop is string value
-//     console.log('value: ', cat[key])  // access the value , cat['fur']
-//     console.log();
-// }
+//-----------------------------------------------------------------
+
+//for .... in loop, useful for  objects
+
+
+for (let key in cat) {  //key represents ... fur, name, legs, age, meow
+    console.log('key: ', key)
+    //prop is string value
+    console.log('value: ', cat[key])  // access the value , cat['fur']
+    console.log();
+}
 
 // output example
 // key:  name
@@ -119,31 +119,31 @@
 
 //obj 1
 
-// let car = {
-//     make: 'hyundai',
-//     year: 2016,
-//     color: ['grey', 'metallic'],
-//     fuel: true,
-//     drive(){
-//         console.log('vroom vroom')
-//     }
-// } 
+let car = {
+    make: 'hyundai',
+    year: 2016,
+    color: ['grey', 'metallic'],
+    fuel: true,
+    drive(){
+        console.log('vroom vroom')
+    }
+} 
 
-// console.log(car)
+console.log(car)
 
-// //obj 2
+//obj 2
 
-// let playGame = {
-//     game: 'skyrim',
-//     startPlayingAt: 2100,
-//     havingFun: true,
-//     shout(){
-//         console.log('Fus Ro Dah')
-//     }
-// } 
+let playGame = {
+    game: 'skyrim',
+    startPlayingAt: 2100,
+    havingFun: true,
+    shout(){
+        console.log('Fus Ro Dah')
+    }
+} 
 
-// console.log(playGame)
-// playGame.shout();
+console.log(playGame)
+playGame.shout();
 
 
 //-----------------------------------------------
@@ -155,42 +155,43 @@
 
 //need somewhere to store string
 //converts string to obj
-//
+
 
 let str = []
 let obj = {
 
 }
 
-//characterCounter - function
-//str - parameters (place holder for argument/string)
-//strArr - stored string split up
+// characterCounter - function
+// str - parameters (place holder for argument/string)
+// strArr - stored string split up
 
-// function characterCounter(str){ //create func and take str as arguement
-//     for(let i = 0; i < str.length; i++){ //loop through entire string
-//         for() {  //count occurences?
+function characterCounter(str){ //create func and take str as arguement
+    for(let i = 0; i < str.length; i++){ //loop through entire string
+        for() {  //count occurences?
             
-//         }
-//         //take string store in array  
-//     let strArr = str.split('') 
+        }
+        //take string store in array  
+    let strArr = str.split('') 
 
-//     }
+    }
     
-// }
+}
 
-// characterCounter('hello'); // character and how many times
+characterCounter('hello'); // character and how many times
 
-// //output h: 1, e: 1, l: 2, 0: 1
+//output h: 1, e: 1, l: 2, 0: 1
 
-// // * can loop through with for of instead of for loop
-
-
-// const string = 'hello'
-// console.log(string.split('')) //split
-// console.log([...string]) // spread
-// //output [ 'h', 'e', 'l', 'l', 'o' ]
+// * can loop through with for of instead of for loop
 
 
+const string = 'hello'
+console.log(string.split('')) //split
+console.log([...string]) // spread
+//output [ 'h', 'e', 'l', 'l', 'o' ]
+
+
+//Rasheem code example
 function count(str){
     let obj={};
     for(let i=0; i < str.length; i++){
@@ -208,23 +209,3 @@ function count(str){
 }
   console.log(count("Mississippi"));
 
-//------------------------------------------------
-//see nested pic jade.png
-
-//cat.friends[1].name
-//snake
-
-//cat.friends[2].name
-//rixio
-
-//cat.friends[2].friends[0].fins
-//5
-
-
-//specific character in a string in one of the properties
-//'y' in platypus
-
-//cat.friends[2].buddies[1].type[4]
-//cat.friends[2].buddies[1].type.charAt[4]
-
-//--------------------------------------------------

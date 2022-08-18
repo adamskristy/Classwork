@@ -34,18 +34,20 @@ const cat = {
 // How do access nested values???
 
 // 1. How do we access the string 'Snake'?
-// console.log(cat.friends[1].name) 
+ console.log(cat.friends[1].name) 
 
 // 2. How do we access the string 'Rixio'?
-// console.log(cat.friends[2].name)
+ console.log(cat.friends[2].name)
 
 // 3. How do we access the fins property?
-// console.log(cat.friends[2].buddies[0].fins)
+ console.log(cat.friends[2].buddies[0].fins)
 
 
 cat.friends
 cat['friends']
 
+//specific character in a string in one of the properties
+//'y' in platypus
 
 console.log(cat.friends[2].buddies[1].type[4])
 console.log(cat.friends[2].buddies[1][1])
