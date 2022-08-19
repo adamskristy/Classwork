@@ -1,4 +1,4 @@
-//Functions
+// FUNCTIONS
 //provide reuse & documentation
 
 console.log()
@@ -76,4 +76,6 @@ function planetHasWater(planet){
 
 
 
-
+//A higher-order function accepts functions as parameters, returns a function, or both!
+//We call functions that get passed in as parameters callback functions. 
+//Callback functions get invoked during the execution of the higher-order function.

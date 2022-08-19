@@ -1,4 +1,4 @@
-//Nested For-Loops
+//Nested FOR LOOPS
 
 //Output 1:
 

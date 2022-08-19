@@ -82,4 +82,51 @@
         console.log("Sorry, you're too young.")
     }
 
-//F.
+// II. Loops
+
+//A. The basics
+
+    // //1. 
+    // for (let i = 0; i <= 10; i++) {
+    //     console.log(i);
+    // }
+
+    // //2.
+    // for (let j = 400; j <= 10; j++) {
+    //     console.log(j);
+    // }
+
+    // //3.
+    // for (let x = 12; x < 400; x += 3) {
+    //     console.log(x);
+    // }
+
+//B. Get even
+
+    // for (y = 1; y <=100; y++){
+    //     if(y % 2 == 0 ){
+    //         console.log(y + '<-- is an even number')
+    //     }else{
+    //         console.log(y)
+    //     }
+    // }
+
+//C. Give me Five
+
+  for (number = 0; number <= 100; number++)  {
+    if(number % 5 == 0 && number % 3 == 0){
+        console.log('I found a ' + number + '. High five!' + ' Three is a crowd')
+        
+    }else if (number % 5 == 0 || number % 3 != 0){
+        console.log('I found a ' + number + '. High five!')
+    }else if (number % 3 == 0 || number % 5 != 0){
+        console.log('Three is a crowd')
+    }
+}
+
+//D. Savings Account
+    let bank_acct = sum;
+
+    for(let i = 0; i < 10; i++){
+        
+    }
