@@ -92,7 +92,16 @@ if (cat.science) { //undefined
 
 //-----------------------------------------------------------------
 
-//for .... in loop, useful for  objects
+//FOR IN LOOP
+// loops through properties of an object
+//keys are properties
+//values are data types (string, array, objects, etc)
+//keys reference values
+
+// for (const variable in object) {
+//     statement
+//   }
+  
 
 
 for (let key in cat) {  //key represents ... fur, name, legs, age, meow
@@ -148,6 +157,7 @@ playGame.shout();
 
 //-----------------------------------------------
 
+//Exercises
 
 //create function
 //takes string as arguement
@@ -166,17 +176,17 @@ let obj = {
 // str - parameters (place holder for argument/string)
 // strArr - stored string split up
 
-function characterCounter(str){ //create func and take str as arguement
-    for(let i = 0; i < str.length; i++){ //loop through entire string
-        for() {  //count occurences?
+// function characterCounter(str){ //create func and take str as arguement
+//     for(let i = 0; i < str.length; i++){ //loop through entire string
+//         for() {  //count occurences?
             
-        }
-        //take string store in array  
-    let strArr = str.split('') 
+//         }
+//         //take string store in array  
+//     let strArr = str.split('') 
 
-    }
+//     }
     
-}
+// }
 
 characterCounter('hello'); // character and how many times
 
@@ -208,4 +218,6 @@ function count(str){
         return obj;
 }
   console.log(count("Mississippi"));
+
+// -------------------------------------------
 
