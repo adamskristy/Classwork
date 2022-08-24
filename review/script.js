@@ -264,7 +264,7 @@
 
     
     //1. What is kristyn wearing today?
-        console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!")
+        //console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!")
     
     //2. Add "raybans" to her closet after "yellow knit hat"
         //kristynsCloset.splice(6,0, 'raybans')
@@ -276,77 +276,77 @@
         //console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][1] + " and " + thomsCloset[2][1])
 
     //8. Get specific about what pjs Thom is wearing. Modify name of Pj pants to footie pajamas 
-        console.log(thomsCloset[1][2] = "Footie Pajamas")
+//         console.log(thomsCloset[1][2] = "Footie Pajamas")
 
-// IV. Functions
+// // IV. Functions
 
-//A. printGreeting
-    function printGreeting(name) {
-        console.log("Hello there, " + name + "!")
-    }
-        console.log(printGreeting("Clarice"))
+// //A. printGreeting
+//     function printGreeting(name) {
+//         console.log("Hello there, " + name + "!")
+//     }
+//         console.log(printGreeting("Clarice"))
 
-//B. printCool
-    function printCool(name) {
-        console.log(name + " is cool!")
-    }
-    console.log(printCool("Reptar"))
+// //B. printCool
+//     function printCool(name) {
+//         console.log(name + " is cool!")
+//     }
+//     console.log(printCool("Reptar"))
 
-//C. calculateCube
-    function calculateCube(edge) {
-        return edge *= 3
-    }
+// //C. calculateCube
+//     function calculateCube(edge) {
+//         return edge *= 3
+//     }
 
-    console.log(calculateCube(3))
+//     console.log(calculateCube(3))
 
-//D.isVowel 
-    function isVowel(letter) {
-        let result;
-        result = letter == "a" || letter == "e" ||letter == "i" ||letter == "o" ||letter == "u" ||letter == "y";
-        return result;
-    }
-    console.log(isVowel("b"))
+// //D.isVowel 
+//     function isVowel(letter) {
+//         let result;
+//         result = letter == "a" || letter == "e" ||letter == "i" ||letter == "o" ||letter == "u" ||letter == "y";
+//         return result;
+//     }
+//     console.log(isVowel("b"))
 
-//E. getTwoLengths
-    function getTwoLengths(string1, string2) {
-        let bothLengths = []; 
-        bothLengths.push(string1.length);
-        bothLengths.push(string2.length);
-        return bothLengths;
-        }
+// //E. getTwoLengths
+//     function getTwoLengths(string1, string2) {
+//         let bothLengths = []; 
+//         bothLengths.push(string1.length);
+//         bothLengths.push(string2.length);
+//         return bothLengths;
+//         }
 
-        console.log(getTwoLengths("turtle", "mississippi"))
+//         console.log(getTwoLengths("turtle", "mississippi"))
 
-//F. getMultipleLengths
+// //F. getMultipleLengths
 
-    function getMultipleLengths(arr) {
-        let newArr = [];
-        for(let i = 0; i < arr.length; i++){ //iterating through arrays
-            newArr.push(arr[i].length); //getting length of strings in array
-        } 
-        return newArr
-    } 
-    console.log(getMultipleLengths(["this", "is", "a", "long", "assignment"]));
+//     function getMultipleLengths(arr) {
+//         let newArr = [];
+//         for(let i = 0; i < arr.length; i++){ //iterating through arrays
+//             newArr.push(arr[i].length); //getting length of strings in array
+//         } 
+//         return newArr
+//     } 
+//     console.log(getMultipleLengths(["this", "is", "a", "long", "assignment"]));
 
-//G. maxOfThree
-    function maxOfThree(num1, num2, num3) {
-        let max = Math.max(num1, num2, num3);
-        return max;
-    }
+// //G. maxOfThree
+//     function maxOfThree(num1, num2, num3) {
+//         let max = Math.max(num1, num2, num3);
+//         return max;
+//     }
 
-    console.log(maxOfThree(6, 9, 1))
+//     console.log(maxOfThree(6, 9, 1))
 
-//H. printLongestWord < ---- COME BACK
-    function printLongestWord(arr) {
-        let longestWord =[];
-        for(let i = 0; i < arr.length; i++) {
-            if (arr[i] > longestWord.length){
-            longestWord = arr[i] 
-            } 
-        }
-        return longestWord;
-    }   
-    console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big"]))
+// //H. printLongestWord < ---- COME BACK
+//     function printLongestWord(arr) {
+//         let longestWord =[];
+//         for(let i = 0; i < arr.length; i++) {
+//             if (arr[i] > longestWord.length){
+//             longestWord = arr[i] 
+//             } 
+//         }
+//         return longestWord;
+//     }   
+//     console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big"]))
 
 //Objects
 
@@ -357,10 +357,51 @@
         age: 30,
         purchased: [],
     }
+    //console.log(user)
 
 //B. Update the User
    user.email = "kristy2@email.com" 
    user.age++
+   //console.log(user)
+
 
 //C. Adding keys and values
     user.location = "Maryland"
+    //console.log(user)
+
+
+//D. Shopaholic!
+    user.purchased.push("carbohydrates", "peace of mind", "Merino jodhpurs")
+    //console.log(user.purchased[2])
+
+//E. Object-within-object
+
+    user.friend = {
+        name: "Bluey",
+            age: 6,
+            location: "Australia",
+            purchased: [],
+    }
+
+    //console.log(user.friend['name'])
+    //console.log(user.friend['location'])
+    user.friend['age'] = 55;
+
+   // console.log(user.friend['age'])
+
+    user.friend.purchased.push("The One ring")
+    //console.log(user.friend)
+
+    user.friend.purchased.push("A latte")
+    //console.log(user.friend['purchased'][1])
+
+//F. Loops
+
+    //users purchased array
+    
+
+    //friends purchased array
+    for(let i = 0; i < user.friend['purchased'].length; i++){
+        console.log(user.friend['purchased'][i])
+    }
+

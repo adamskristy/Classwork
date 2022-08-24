@@ -21,4 +21,9 @@ objects
     cat object lab
     for in
 review
+    chef
+    hackerrank
+    hamster
+    script (review)
+    test (dinner)
 variables_condtionals
