@@ -124,7 +124,7 @@
 //         }
 //     }
 
-// //D. Savings Account <----- COME BACK TO THIS
+// //D. Savings Account  < ----- COME BACK TO THIS ----- >
 //     const range = [1, 10]; //set range
 //     const bank_account = ([num1, num2]) => {
 //     let sum = 0;
@@ -336,7 +336,7 @@
 
 //     console.log(maxOfThree(6, 9, 1))
 
-// //H. printLongestWord < ---- COME BACK
+// //H. printLongestWord < ---- COME BACK TO THIS ----- >
 //     function printLongestWord(arr) {
 //         let longestWord =[];
 //         for(let i = 0; i < arr.length; i++) {
@@ -356,7 +356,14 @@
         email: "kristy@email.com",
         age: 30,
         purchased: [],
+        friend: {
+            name: "Bluey",
+            age: 6,
+            location: "Australia",
+            purchased: [],
+        }
     }
+    
     //console.log(user)
 
 //B. Update the User
@@ -376,12 +383,12 @@
 
 //E. Object-within-object
 
-    user.friend = {
-        name: "Bluey",
-            age: 6,
-            location: "Australia",
-            purchased: [],
-    }
+    // user.friend = {
+    //     name: "Bluey",
+    //         age: 6,
+    //         location: "Australia",
+    //         purchased: [],
+    // }
 
     //console.log(user.friend['name'])
     //console.log(user.friend['location'])
@@ -398,10 +405,64 @@
 //F. Loops
 
     //users purchased array
-    
+    // for (let i = 0; i < user['purchased'].length; i++){
+    //     console.log(user['purchased'][i])
+    // }
 
     //friends purchased array
-    for(let i = 0; i < user.friend['purchased'].length; i++){
-        console.log(user.friend['purchased'][i])
-    }
+    // for(let i = 0; i < user.friend['purchased'].length; i++){
+    //     console.log(user.friend['purchased'][i])
+    // }
 
+// G. Functions can operate on objects < ---- COME BACK TO THIS
+    // function updateUser(){
+    //     user.age++;
+    //     user.name.toUpperCase();
+    // }
+
+// updateUser()
+// console.log(user.name)
+
+
+
+
+// Cat Combinator
+
+//1. Mama cat
+let cat1 = {
+    name:"Aqua",
+    breed:"russian blue",
+    age: 4,
+}
+
+console.log(cat1.age)
+console.log(cat1.breed)
+
+//2. Papa cat
+let cat2 = {
+    name:"Floyd",
+    breed:"tabby",
+    age: 3,
+}
+
+//3. Combine Cats!
+
+// function combineCats(mama, papa) {
+//    console.log(mama, papa) 
+// }
+
+// combineCats(cat1, cat2)
+
+function combineCats(cat1, cat2){
+    let catCombine = {
+        name: cat1.name + cat2.name,
+        breed: cat1.breed + '-' + cat2.breed,
+        age: 1
+    }
+    return catCombine
+}
+
+console.log(combineCats(cat1, cat2))
+
+//4. Cat brain bender
+console.log(combineCats(combineCats(combineCats(cat1, cat2),combineCats(cat1, cat2)),combineCats(combineCats(cat1, cat2),combineCats(cat1, cat2))))
