@@ -292,20 +292,21 @@
 //     }
 //     console.log(printCool("Reptar"))
 
-// //C. calculateCube
-//     function calculateCube(edge) {
-//         return edge *= 3
+//  //C. calculateCube
+//      function calculateCube(edge) {
+//         let cubeThree = Math.pow(edge,3) //math.pow is for exponents (value,exponent)
+//          return cubeThree
 //     }
 
 //     console.log(calculateCube(3))
 
 // //D.isVowel 
-//     function isVowel(letter) {
-//         let result;
-//         result = letter == "a" || letter == "e" ||letter == "i" ||letter == "o" ||letter == "u" ||letter == "y";
-//         return result;
-//     }
-//     console.log(isVowel("b"))
+    // function isVowel(letter) {
+    //     let result;
+    //     result = letter.toLowerCase() == "a" || letter.toLowerCase() == "e" ||letter.toLowerCase() == "i" ||letter.toLowerCase() == "o" ||letter.toLowerCase() == "u" ||letter.toLowerCase() == "y";
+    //     return result;
+    // }
+    // console.log(isVowel("A"))
 
 // //E. getTwoLengths
 //     function getTwoLengths(string1, string2) {
@@ -435,8 +436,8 @@ let cat1 = {
     age: 4,
 }
 
-console.log(cat1.age)
-console.log(cat1.breed)
+//console.log(cat1.age)
+//console.log(cat1.breed)
 
 //2. Papa cat
 let cat2 = {
@@ -462,7 +463,7 @@ function combineCats(cat1, cat2){
     return catCombine
 }
 
-console.log(combineCats(cat1, cat2))
+//console.log(combineCats(cat1, cat2))
 
 //4. Cat brain bender
-console.log(combineCats(combineCats(combineCats(cat1, cat2),combineCats(cat1, cat2)),combineCats(combineCats(cat1, cat2),combineCats(cat1, cat2))))
+//console.log(combineCats(combineCats(combineCats(cat1, cat2),combineCats(cat1, cat2)),combineCats(combineCats(cat1, cat2),combineCats(cat1, cat2))))
