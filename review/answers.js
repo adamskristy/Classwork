@@ -57,15 +57,43 @@
 ////////////////////////////////////////////////
 ///Yell at the Ninja Turtles
 ////////////////////////////////////////////////
-const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
-for (const turtle of ninjaTurtles) {
-    console.log(turtle.toUpperCase())
-}
+// const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
+// for (const turtle of ninjaTurtles) {
+//     console.log(turtle.toUpperCase())
+// }
 
 ////////////////////////////////////////////////
 ///Methods, Revisited
 ////////////////////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious']
 
+//console.log(favMovies[8])
+
+//console.log(favMovies.sort())
+//sorted the array in alphabetical order, it created a reference to originial array
+
+favMovies.push("Guardians of the Galaxy") // added to end of array
+//console.log(favMovies)
+
+favMovies.reverse() //reversed the array
+//console.log(favMovies)
+
+favMovies.shift() //removed the first element of array
+//console.log(favMovies)
+
+favMovies.unshift() //
+//console.log(favMovies)
+
+//console.log(favMovies.indexOf("Django Unchained"))
+favMovies.splice(15,1, "Avatar")//removed django and add avatar
+//console.log(favMovies)
+
+const halfFavMovies = favMovies.splice(9,9)//removed half of array, permanently alters
+//console.log(favMovies)
+
+//console.log(halfFavMovies) //logs the half that was removed
+
+console.log(favMovies.indexOf("Fast and Furious"))// return zero
 
 ////////////////////////////////////////////////
 ///Where is Waldo
