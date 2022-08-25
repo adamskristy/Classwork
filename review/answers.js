@@ -93,12 +93,22 @@ const halfFavMovies = favMovies.splice(9,9)//removed half of array, permanently 
 
 //console.log(halfFavMovies) //logs the half that was removed
 
-console.log(favMovies.indexOf("Fast and Furious"))// return zero
+//console.log(favMovies.indexOf("Fast and Furious"))// return zero
 
 ////////////////////////////////////////////////
 ///Where is Waldo
 ////////////////////////////////////////////////
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                     ["Lucinda", "Jacc", "Neff", "Snoop"],
+                     ["Petunia", ["Baked Goods", "Waldo"]]];
 
+whereIsWaldo.splice(1,1) //remove eggbert
+//console.log(whereIsWaldo)
+
+whereIsWaldo[1][2] = "No One"
+console.log(whereIsWaldo)
+
+console.log(whereIsWaldo[2][1][1])
 
 ////////////////////////////////////////////////
 ///Excited Kitten
