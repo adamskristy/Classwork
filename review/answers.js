@@ -106,15 +106,83 @@ whereIsWaldo.splice(1,1) //remove eggbert
 //console.log(whereIsWaldo)
 
 whereIsWaldo[1][2] = "No One"
-console.log(whereIsWaldo)
+//console.log(whereIsWaldo)
 
-console.log(whereIsWaldo[2][1][1])
+//console.log(whereIsWaldo[2][1][1])
 
 ////////////////////////////////////////////////
-///Excited Kitten
+///Excited Kitten <----COME BACK TO THIS ---->
 ////////////////////////////////////////////////
+
+// let catMessages = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "why does the red dot always get away..."]
+// for(let i = 0; i <= 20; i++){
+//     if(i = i % 2 === 0){
+//         let message = catMessages[Math.floor(Math.random() * catMessages.length)]
+//         console.log(message[catMessages])
+//     }
+//     else{
+//         return i
+//     }
+    
+// }
+
 
 
 ////////////////////////////////////////////////
 ///Find the Median
+////////////////////////////////////////////////
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+//median is: put numbers in order, count total numbers,
+//if even take two middle numbers and add them then divide by two
+// if odd, take middle number
+
+function median(arr) {
+
+    nums.sort((a, b) => a - b); //sort the array
+    const middle = Math.floor(nums.length / 2); // find midle of array
+    const findMedian = nums.length % 2 === 1 ? //
+      nums[middle] : //  if array length odd, take middle number
+      (nums[middle - 1] + nums[middle]) / 2; //  if array length even, take to median of two middle numbers
+    return findMedian;
+  }
+console.log(median(nums))
+
+////////////////////////////////////////////////
+///Return of the Closets
+////////////////////////////////////////////////
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    'right sock',
+    "GA hoodie",
+    "green pants",
+    "yello knit hat",
+    "marshmallow peeps"
+];
+
+//thom's closet is more complicated
+const thomsCloset = [
+    [
+        //shirts
+        "grey button-up",
+        "dark grey button=up",
+        "light blue button-up",
+        "blue button-up"
+    ], [
+        //pants
+        'grey jeans',
+        'jeans',
+        'PJs'
+    ],[
+        //accessories
+        "wool mittens",
+        "wool scarf",
+        "raybans"
+    ]
+];
+
+
+////////////////////////////////////////////////
+///Dirty Laundry
 ////////////////////////////////////////////////
