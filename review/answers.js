@@ -111,20 +111,25 @@ whereIsWaldo[1][2] = "No One"
 //console.log(whereIsWaldo[2][1][1])
 
 ////////////////////////////////////////////////
-///Excited Kitten <----COME BACK TO THIS ---->
+///Excited Kitten
 ////////////////////////////////////////////////
-
-// let catMessages = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "why does the red dot always get away..."]
 // for(let i = 0; i <= 20; i++){
-//     if(i = i % 2 === 0){
-//         let message = catMessages[Math.floor(Math.random() * catMessages.length)]
-//         console.log(message[catMessages])
-//     }
-//     else{
-//         return i
-//     }
-    
+//     console.log("HSSSSSS")
 // }
+
+
+let catMessages = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "why does the red dot always get away..."]
+let message = 0;
+for(let i = 0; i <= 20; i++){
+    if(i % 2 === 0){
+        message = catMessages[Math.floor(Math.random() * catMessages.length)]
+        console.log(message[catMessages])
+    }
+    else{
+        console.log ( "Love me, pet me! HSSSSSS!");
+    }
+    
+}
 
 
 
@@ -141,9 +146,9 @@ function median(arr) {
 
     nums.sort((a, b) => a - b); //sort the array
     const middle = Math.floor(nums.length / 2); // find midle of array
-    const findMedian = nums.length % 2 === 1 ? //
-      nums[middle] : //  if array length odd, take middle number
-      (nums[middle - 1] + nums[middle]) / 2; //  if array length even, take to median of two middle numbers
+    const findMedian = nums.length % 2 === 1 ? // ( ternary) condition ?
+      nums[middle] : //  if array length odd, take middle number (what happens if true)
+      (nums[middle - 1] + nums[middle]) / 2; //  if array length even, take to median of two middle numbers (what happens if false)
     return findMedian;
   }
 //console.log(median(nums))
@@ -186,13 +191,13 @@ const thomsCloset = [
 ////////////////////////////////////////////////
 ///Alien Attire
 ////////////////////////////////////////////////
-console.log(kristynsCloset)
+//console.log(kristynsCloset)
 
 const kristynsShoe = kristynsCloset.shift();
-console.log(kristynsShoe)
+//console.log(kristynsShoe)
 
 thomsCloset.push(kristynsShoe)
-console.log(thomsCloset)
+//console.log(thomsCloset)
 
 ////////////////////////////////////////////////
 ///Dress Us Up
@@ -202,10 +207,21 @@ console.log(thomsCloset)
 // console.log("Kristyn is wearing " + kristynsCloset[0]+ ", " + kristynsCloset[4]+ ", and a " + kristynsCloset[5])
 // console.log("Kristyn is wearing " + kristynsCloset[1]+ ", " + kristynsCloset[2]+ ", and a " + kristynsCloset[3])
 
-console.log("Thom is wearing a " + thomsCloset[0][1]+ ", " + thomsCloset[1][2]+ ", and a " + thomsCloset[2][1])
-console.log("Thom is wearing a " + thomsCloset[0][3]+ ", " + thomsCloset[1][1]+ ", and " + thomsCloset[2][2])
-console.log("Thom is wearing a " + thomsCloset[0][2]+ ", " + thomsCloset[1][0]+ ", and " + thomsCloset[2][0])
+// console.log("Thom is wearing a " + thomsCloset[0][1]+ ", " + thomsCloset[1][2]+ ", and a " + thomsCloset[2][1])
+// console.log("Thom is wearing a " + thomsCloset[0][3]+ ", " + thomsCloset[1][1]+ ", and " + thomsCloset[2][2])
+// console.log("Thom is wearing a " + thomsCloset[0][2]+ ", " + thomsCloset[1][0]+ ", and " + thomsCloset[2][0])
 
 ////////////////////////////////////////////////
 ///Dirty Laundry
 ////////////////////////////////////////////////
+    for(let i = 0; i < kristynsCloset.length; i++ ){
+        console.log("WHIRR: Now washing item: " + kristynsCloset[i] )
+    }
+
+/////////////////////////////////////////////////
+///Inventory <--- ASK ABOUT THIS --->
+////////////////////////////////////////////////
+
+// console.log(thomsCloset[0])
+// console.log(thomsCloset[1])
+// console.log(thomsCloset[2])
