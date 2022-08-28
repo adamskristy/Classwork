@@ -146,7 +146,7 @@ function median(arr) {
       (nums[middle - 1] + nums[middle]) / 2; //  if array length even, take to median of two middle numbers
     return findMedian;
   }
-console.log(median(nums))
+//console.log(median(nums))
 
 ////////////////////////////////////////////////
 ///Return of the Closets
@@ -157,31 +157,54 @@ const kristynsCloset = [
     'right sock',
     "GA hoodie",
     "green pants",
-    "yello knit hat",
+    "yellow knit hat",
     "marshmallow peeps"
 ];
 
-//thom's closet is more complicated
+//Thom's closet is more complicated. Check out this nested data structure!!
 const thomsCloset = [
     [
-        //shirts
+        //These are Thom's shirts
         "grey button-up",
-        "dark grey button=up",
+        "dark grey button-up",
         "light blue button-up",
         "blue button-up"
     ], [
-        //pants
+        //These are Thom's pants
         'grey jeans',
         'jeans',
         'PJs'
     ],[
-        //accessories
+        //Thom's accessories
         "wool mittens",
         "wool scarf",
         "raybans"
     ]
 ];
 
+
+////////////////////////////////////////////////
+///Alien Attire
+////////////////////////////////////////////////
+console.log(kristynsCloset)
+
+const kristynsShoe = kristynsCloset.shift();
+console.log(kristynsShoe)
+
+thomsCloset.push(kristynsShoe)
+console.log(thomsCloset)
+
+////////////////////////////////////////////////
+///Dress Us Up
+////////////////////////////////////////////////
+
+// console.log("Kristyn is wearing a " + kristynsCloset[2]+ ", " + kristynsCloset[3]+ ", and a " + kristynsCloset[4])
+// console.log("Kristyn is wearing " + kristynsCloset[0]+ ", " + kristynsCloset[4]+ ", and a " + kristynsCloset[5])
+// console.log("Kristyn is wearing " + kristynsCloset[1]+ ", " + kristynsCloset[2]+ ", and a " + kristynsCloset[3])
+
+console.log("Thom is wearing a " + thomsCloset[0][1]+ ", " + thomsCloset[1][2]+ ", and a " + thomsCloset[2][1])
+console.log("Thom is wearing a " + thomsCloset[0][3]+ ", " + thomsCloset[1][1]+ ", and " + thomsCloset[2][2])
+console.log("Thom is wearing a " + thomsCloset[0][2]+ ", " + thomsCloset[1][0]+ ", and " + thomsCloset[2][0])
 
 ////////////////////////////////////////////////
 ///Dirty Laundry
