@@ -101,17 +101,25 @@ topMenuEl.addEventListener('click', function(event){  //add event listener to to
   }
 
 //5.4
-event.target.classList.remove("active") //remove active class
+for(let i = 0; i < topMenuLinks.length; i++){ //loop through all menu links
+  topMenuLinks[i].classList.remove("active") //remove active class
+}
 
 //5.5
 event.target.classList.add("active") //add active class
 
 //5.6
-let activeLink;
+event.target.classList.add('active') 
 
-for(let i = 0;  i < menuLinks.length)
-
-// event.target.classList.add('active') 
+let activeLink; //hold obj in menulinks
+for(let i = 0;  i < menuLinks.length; i++){
+  //look see if target text matches text
+ if(event.target.text == menuLinks[i].text){ //check if target tag matches the text property in given object for menulinks
+ //set active link to menulinks[i]
+ activeLink = menuLinks[i]
+  }
+}
+//----other method with no variable-----
 //      if (event.target.text != "about"){ // eveything but about, 
 //         showingSubMenu = true;          // about does not have sublinks property
 // }
@@ -119,15 +127,65 @@ for(let i = 0;  i < menuLinks.length)
 //   showingSubMenu = false;
 // }
 
+if (activeLink["subLinks"]){ //if property exist
+  showingSubMenu = true;  //will set to true
+}
+else{
+  showingSubMenu = false;
+}
+
+//5.8
+  //5.7 calls this function so it is below//
+
+  const buildSubMenu = function(obj) {
+    //first clear all elements from previous submenus
+    while (subMenuEl.firstChild) {
+      subMenuEl.removeChild(subMenuEl.firstChild);
+    }
+
+    //iterates and adds links to sub menu
+    for (let i = 0; i < obj.subLinks.length; i++) {
+      let link = document.createElement("a") //create <a> element
+      link.href = obj.subLinks[i].href //add href attribute
+      link.innerText = obj.subLinks[i].text
+      subMenuEl.appendChild(link) 
+    }
+  } 
+
+//5.7
+    if (showingSubMenu) {
+      buildSubMenu(activeLink)
+      subMenuEl.style.top = "100%"
+    } else {
+      subMenuEl.style.top = '0'
+    }
+
+  })
+  //end of topMenuEL event listener
+
+
+//6.0
+subMenuEl.addEventListener("click", function(event) {
+
+  //don't follow link
+  event.preventDefault()
+
+  //make sure that the target is a link
+  if (event.target.tagName != "A") {
+    return
+  }
+
+//sub menu goes away after click
+showingSubMenu = false;
+subMenuEl.style.top = "0"
+
+//remove active on parent menu item
+for (let i = 0; i < topMenuLinks.length; i++) {
+  topMenuLinks[i].classList.remove("active")
+}
+
+//set heading to the text of the subheading that we clicked
+heading.innerHTML = event.target.text
+
+
 })
-
-
-
-
-
-
-
-
-
- 
-
