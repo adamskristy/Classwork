@@ -1,0 +1,24 @@
+/*This is a comment */
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+    }
+    body {
+    margin: 0;
+    font-family: Helvetica;
+}
+
+nav {
+    display: flex;
+    /* row is default direction property for flex */
+    height: 50px;
+    background-color: #a2cbb6;
+    font-size: 20px;
+    margin: 10px;
+    color: #f3dba8;
+}
+
+nav > div:last-child{
+    margin-left: auto;
+    /* move divs within nav(logout) to other side */
+}
