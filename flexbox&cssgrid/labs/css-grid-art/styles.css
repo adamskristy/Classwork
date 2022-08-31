@@ -10,6 +10,7 @@ body {
     grid-gap: 4px;
     grid-template-rows: 100px 100px 1fr 1fr;
     grid-template-columns: 80px 1fr 30px;
+    background-color: black;
 }
 
 .item {
@@ -19,6 +20,7 @@ body {
 .one {
     grid-row: 1;
     grid-column: 1;
+    color:#F3F3F3
 }
 
 .two {
@@ -27,28 +29,34 @@ body {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
+    color: red;
 }
 
 .three {
+    color:#F3F3F3
 }
 
 .four {
+    
     background-color: blue;
     grid-row-start: 3;
     grid-row-end: -1;
+    color:blue;
 }
 
 .five {
     grid-row-start: 3;
     grid-row-end: -1;
-    
+    color:#F3F3F3
 }
 
 .six {
+    color:#F3F3F3
    
 }
 
 .seven {
+    color: yellow;
     background-color: yellow;
     grid-row-start:4;
     grid-column-start: 3;

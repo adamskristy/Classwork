@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+}
+
+.item {
+    width: 100px;
+    height: 50px;
+}
+
+/* I had a (#id) instead of a (.class) */
+/* just added some space (width and height) around the boxes to hover over */
+.container{
+    width: 300px; 
+    height: 200px;
+    outline: 1px solid white; /*outline just so you can see the hover area */  
+}
+
+/* selecting item inside of container, not just container */
+.container:hover .item{
+    width: 250px;     
+}
+
+/* base class */
+.blue-box {
+    background-color: blue;
+    transition: width 2s ease-in;  
+}
+
+/* modifying class */
+.blue-box:hover {   
+    width: 250px;   
+}
+
+.red-box {
+    background-color: red;
+    transition: width 2s ease-in;
+    transition-delay: 2s;  /* added a delay so the transition staggers */
+}
+
+.red-box:hover {
+    width: 250px;
+}
