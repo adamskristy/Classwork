@@ -1,0 +1,45 @@
+So if I had to compare req.query to anything it’s basically like when you declare something
+Then call it back in a function, we're creating like params but without putting params in the app.get line (edited)
+We use query instead because we’re working on a data base
+So from my understanding
+There’s more to it though
+
+
+
+app.get("/fruits/", (req, res) => {
+  const name1 = req.query.name;
+   const color1 = req.query.color
+   const readytoeat = req.query.readyToEat
+   let filteredArr = fruits.filter((item) => (item.name == name1 && item.color == color1) || (item.readyToEat === true));
+    if(filteredArr.length>0){
+        res.send(filteredArr);
+    }else{
+        res.send('No Match Found');
+    }
+  });
+
+path should be like this :http://localhost:3000/fruits/?readyToEat=true
+
+
+app.get('/user', function (req, res) {
+  console.log("Name: ", req.query.name);
+  console.log("Age:", req.query.age);
+  res.send();
+});
+So this basically creates our params
+[10:37 AM]
+http://localhost:3000/user?name=Rasheem&age=25,
+
+
+since the param is already written we have to call the param in the req.param instead of using a query
+/fruits/:index
+^           ^
+route     parameter we wrote
+
+
+req.param we already have a param so we set it  to something,
+query we dont have a param set so we want it to help find something
+
+params for if we already declared the parameter
+query creates a parameter
+but we access queries by typing localhost:3000/?
