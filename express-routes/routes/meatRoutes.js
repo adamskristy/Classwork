@@ -7,14 +7,21 @@ const router = express.Router();
 //load meat data
 const meat = require('../models/meats')
 
-//setup index route
-router.get('/meat', (req, res) => {
-    res.send(meat);
+//setup Index route
+router.get('/', (req, res) => {
+    res.render('meats/Index', {meat: meat})
 });
 
-//setup the show route
-router.get('/meat/:index', (req, res) => {
+//setup New route
+router.get('/new', (req, res) => {
+    res.render('meats/New')
+})
+
+//setup Show route
+router.get('/:index', (req, res) => {
     res.send(meat[req.params.index]);
 });
+
+//setup Edit route
 
 module.exports = router;

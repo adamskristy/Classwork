@@ -1,0 +1,43 @@
+//load express
+const express = require('express')
+
+//create special router object for our routes
+const router = express.Router();
+
+//load meat data
+const meat = require('../models/meats')
+
+//setup index route
+router.get('/meat', (req, res) => {
+    res.send(meat);
+});
+
+////////////////////////////////////////
+///// Practice with params and queries
+////////////////////////////////////////
+
+// Params
+router.get('/meat/:index', (req, res) => {
+    res.send(req.params.index);
+    //req.params is an object and value of index is stored inside
+    //you get what user has written in address bar
+    //index can be anything, it is a parameter (/meat/:item), (req.params.item)
+    //params better for one item
+    
+});
+
+//query
+router.get('/meat/index', (req, res) => {
+    res.send(req.query.name);
+    //returns an object
+    //all specific properties of object in res.send
+    //better for multiple items
+    //http://localhost:3000/meat/index/?name=kristy
+        //output
+        // {
+        //     "name": "kristy"
+        // }
+});
+    
+
+module.exports = router;
