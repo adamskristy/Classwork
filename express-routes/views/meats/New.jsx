@@ -4,8 +4,7 @@ const DefaultLayout = require('../layouts/DefaultLayout');
 class New extends React.Component {
     render () {
         return (
-            <DefaultLayout title="create a new fmeat" foodGroup="meats">
-                <div>
+            <DefaultLayout title="create a new meat" foodGroup="meats">
                     <h1>New Meat Page</h1>
                     <form action ='/meats' method ="POST">
                         <label htmlFor="name">Name:</label>
@@ -16,7 +15,6 @@ class New extends React.Component {
 
                         <input type="submit" name="" value="Create Meat"/>
                     </form>
-                </div>
             </DefaultLayout>
         )
     }

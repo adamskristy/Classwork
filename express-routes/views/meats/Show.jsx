@@ -5,18 +5,25 @@ const DefaultLayout = require('../layouts/DefaultLayout');
 class Show extends React.Component {
     render () {
 
-        const {name, type} = this.props.meat
-    //    const meat = this.props.meat
+        const { meat } = this.props;
+    
         return (
             //have to wrap in one parent element
-            <DefaultLayout title ={`${name} details`} foodGroup = "meats">
-                <div>
+            <DefaultLayout title ={`${meat.name} details`} foodGroup = "meats">
                     <h1>Show Page</h1>
-                        <p>The {name} is {type}</p>
+                        <p>The {meat.name} is {meat.type}</p>
+
+                    <button>
+                        <a href={`/meats/${meat._id}/edit`}>Edit</a>
+                    </button>
+
+                    <form action={`/meats/${meat._id}?_method=DELETE`} method="POST">
+                        <input type="submit" value="Delete" />
+                    </form>
+
                     <nav>
                         <a href ='/meats'>Back</a>
                     </nav>
-                </div>
             </DefaultLayout>
         );
     }

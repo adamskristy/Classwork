@@ -17,7 +17,7 @@ class New extends React.Component {
                         <label htmlFor="readyToEat">Is Ready To Eat:</label>
                         <input type="checkbox" id ="readyToEat" name="readyToEat"/>
 
-                        <input type="submit" name=""/>
+                        <input type="submit" value="Create meat"/>
                     </form>
                 </div>
             </DefaultLayout>

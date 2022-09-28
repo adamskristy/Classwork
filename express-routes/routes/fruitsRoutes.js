@@ -49,10 +49,10 @@ router.post('/', createNewFruit)
 // EDIT
 router.get('/:id/edit',showEditView )
 
+// SEED
+router.get('/seed',seedStarterData )
+
 // SHOW
 router.get('/:id', showOneFruit)
-
-// SEED
-router.post('/seed',seedStarterData )
 
 module.exports = router;

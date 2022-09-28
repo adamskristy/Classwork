@@ -6,19 +6,17 @@ class Index extends React.Component {
 
     
         const { meat } = this.props;
-        //<DefaultLayout title = {${meats.name} details} foodGroup ="meat" >
+        
         
 
         return ( 
-            <DefaultLayout title ="All Meat" foodGroup="meats">
-                <div>
+            <DefaultLayout title="All Meats" foodGroup="meats" >
                     <h1>Meats Index Page</h1>
-                    
                     <ul id ="meats-index">
-                        {meat.map((meats)=> {
+                        {meat.map((meat)=> {
                             return (
                                 <li key = {meat._id}>
-                                    The <a href={`/meats/${i}`}> {meats.name}</a> is {meats.type}
+                                    The <a href={`/meats/${meat._id}`}> {meat.name}</a> is {meat.type}
                                 </li>
                             )
                         })}
@@ -26,7 +24,6 @@ class Index extends React.Component {
                     <nav>
                         <a href ='/meats/new'>Create a new meat</a>
                     </nav>
-                </div>
             </DefaultLayout>
         )
     }

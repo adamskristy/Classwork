@@ -1,5 +1,7 @@
 const Fruit = require('../models/fruit')
 
+const seed = require('../models/seed')
+
 // ROUTE     GET /fruits    (index)
 const findAllFruits = (req, res) => {
     //Find takes two arguments
@@ -90,24 +92,8 @@ const showEditView = (req, res) => {
     })
 }
 
-// ROUTE     GET /fruits/:id     (show)
-const showOneFruit = (req, res) => {
-    // res.send(fruits[req.params.index]);
-    
-    //findById accepts two arguments:
-    //1st: id of document in our database
-    //2nd: callback with error object and found document
-    Fruit.findById(req.params.id, (err, foundFruit) => {
-        if(err) {
-            res.status(400).json(err)
-        } else {
-            res.status(200).render('fruits/Show', {fruit: foundFruit})
-        }
-    }) 
-}
-
 // ROUTE       GET /fruits/seed      (seed)
-const seedStarterData = () => {
+const seedStarterData = (req, res) => {
     // Delete all remaining documents (if there are any)
         Fruit.deleteMany({}, (err, deletedFruits) => {
             if (err) {
@@ -125,6 +111,24 @@ const seedStarterData = () => {
             }
         })
     }
+
+// ROUTE     GET /fruits/:id     (show)
+const showOneFruit = (req, res) => {
+    // res.send(fruits[req.params.index]);
+    
+    //findById accepts two arguments:
+    //1st: id of document in our database
+    //2nd: callback with error object and found document
+    Fruit.findById(req.params.id, (err, foundFruit) => {
+        if(err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('fruits/Show', {fruit: foundFruit})
+        }
+    }) 
+}
+
+
 
 
 module.exports = {
