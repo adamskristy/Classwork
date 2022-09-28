@@ -1,68 +1,58 @@
 //load express
 const express = require('express');
 
-//INDUCES
-// Index, New, Delete, Update, Create, Edit, Show
-
 //create special router object for our routes
 const router = express.Router();
 
-//Load our fruits data
-const fruits = require('../models/fruits')
+//Loading our Model of fruit
+// const fruits = require('../models/fruits')
+const Fruit = require('../models/fruit')
 
-// //setup root route
-// router.get('/', (req, res) => {
-//     res.send('<h1Fruit Salad, Yummy yummy</h1>');
-// });
-//too similar to index route below so index would take priority
+// Bring in seed data
+const seed = require('../models/seed')
 
-//setup Index route
-router.get('/', (req, res) => {
-    // res.send(fruits);
-    res.render('fruits/Index', {fruits: fruits});
-});
+// Bring in controller functions (destructure methods)
+const { 
+    findAllFruits, 
+    showNewView, 
+    createNewFruit,
+    seedStarterData,
+    showOneFruit,
+    showEditView,
+    updateOneFruit,
+    deleteOneFruit
+} = require('../controllers/fruitController')
 
-//Setup New route
-router.get('/new', (req, res) =>{
-    // res.send('<form>Create fruit</form>')
-    res.render('fruits/New')
-})
+// Bring in controller object (with methods attached)
+// const fruitController = require('../controllers/fruitController')
+// Example: router.get('/', fruitController.findAllFruits)
 
-//Setup "Destroy"
-router.delete('/:index', (req, res) => {
-    res.send('Deleting a fruit')
-}) 
 
-//Setup "Update"
-router.put('/:index', (req,res) => {
-    res.send('Updating a fruit (in DB)')
-})
+// I.N.D.U.C.E.S
+// Index, New, Delete, Update, Create, Edit, Show
 
-//Setup "Create" route
-router.post('/', (req, res) => {
-    console.log(req.body);
-    if(req.body.readyToEat === "on"){
-        req.body.readyToEat = true
-    } else{
-        req.body.readyToEat = false
-    }
-    fruits.push(req.body);
-    console.log(fruits);
-    // res.send('Creating a new fruit');
-    res.redirect('/fruits') //redirect to home pge
-})
+// INDEX
+router.get('/', findAllFruits)
 
-//Setup "Edit" route
-router.get('/edit/:index/edit', (req, res) => {
-    res.send('<form> Edit fruit</form>')
-})
+// NEW 
+router.get('/new', showNewView )
 
-//Setup "Show" route
-router.get('/:index', (req, res) => {
-    // res.send(fruits[req.params.index]);
-    res.render('fruits/Show', {fruit: fruits[req.params.index]})
-    //setup object called fruit with property of fruit
-    // 
-});
+// DESTROY 
+router.delete('/:id', deleteOneFruit) 
+
+// UPDATE
+router.put('/:id', updateOneFruit)
+
+// CREATE
+router.post('/', createNewFruit)
+
+// EDIT
+router.get('/:id/edit',showEditView )
+
+// SHOW
+router.get('/:id', showOneFruit)
+
+// SEED
+router.post('/seed',seedStarterData )
 
 module.exports = router;

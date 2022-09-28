@@ -1,20 +1,23 @@
-const React = require('react')
+const React = require('react');
+const DefaultLayout = require('../layouts/DefaultLayout');
 
 // class compnent
 class Show extends React.Component {
     render () {
-       const meat = this.props.meat
+
+        const {name, type} = this.props.meat
+    //    const meat = this.props.meat
         return (
             //have to wrap in one parent element
-            <div>
-                <h1>Show Page</h1>
-                    <p>The {meat.name} is {meat.type}</p>
-                    {/* <p>{fruit.readyToEat? 'Its is ready to eat' : 'It is not ready to eat... Cant touch this' }</p> */}
-                <nav>
-                    <a href ='/meats'>Back</a>
-                </nav>
-            </div>
-            
+            <DefaultLayout title ={`${name} details`} foodGroup = "meats">
+                <div>
+                    <h1>Show Page</h1>
+                        <p>The {name} is {type}</p>
+                    <nav>
+                        <a href ='/meats'>Back</a>
+                    </nav>
+                </div>
+            </DefaultLayout>
         );
     }
 }

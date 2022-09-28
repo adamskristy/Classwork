@@ -5,11 +5,18 @@ const express = require('express')
 const router = express.Router();
 
 //load meat data
-const meat = require('../models/meats')
+const Meat = require('../models/meat')
 
 //setup Index route
 router.get('/', (req, res) => {
-    res.render('meats/Index', {meat: meat})
+    Meat.find({}, (err, foundMeat) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('meats/Index', {meat: foundMeat})
+        }
+    })
+    // res.render('meats/Index', {meat: meat})
 });
 
 //setup New route
