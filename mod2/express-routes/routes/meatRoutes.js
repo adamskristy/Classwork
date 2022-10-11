@@ -19,6 +19,7 @@ const {
     createNewMeat,
     showEditView,
     showOneMeat,
+    clearMeatData,
     seedStarterData  
 } = require('../controllers/meatController')
 

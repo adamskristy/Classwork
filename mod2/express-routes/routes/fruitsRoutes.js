@@ -20,6 +20,7 @@ const {
     showOneFruit,
     showEditView,
     updateOneFruit,
+    clearFruitData,
     deleteOneFruit
 } = require('../controllers/fruitController')
 
@@ -51,6 +52,9 @@ router.get('/:id/edit',showEditView )
 
 // SEED
 router.get('/seed',seedStarterData )
+
+// CLEAR
+router.get('/clear', clearFruitData)
 
 // SHOW
 router.get('/:id', showOneFruit)

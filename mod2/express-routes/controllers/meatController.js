@@ -18,7 +18,7 @@ const showNewView = (req, res) =>{
     res.render('meats/New')
 }
 
-// ROUTE       DELETE /fruits/:id      (destroy)
+// ROUTE       DELETE /meats/:id      (destroy)
 const deleteOneMeat =  (req, res) => {
     Meat.findByIdAndDelete(req.params.id, (err, deletedMeat) => {
         if (err) {
@@ -29,7 +29,7 @@ const deleteOneMeat =  (req, res) => {
     })
 }
 
-// ROUTE     PUT /fruits/:id       (update)
+// ROUTE     PUT /meats/:id       (update)
 const updateOneMeat =  (req,res) => {
     Meat.findByIdAndUpdate(req.params.id, req.body, (err, foundMeat) => {
         if (err) {
@@ -40,7 +40,7 @@ const updateOneMeat =  (req,res) => {
     })
 }
 
-// ROUTE     POST /fruits     (create)
+// ROUTE     POST /meats     (create)
 const createNewMeat = (req, res) => {
     Meat.create(req.body, (err, createdMeat) => {
         if (err) {
@@ -51,7 +51,7 @@ const createNewMeat = (req, res) => {
     })
 }
 
-// ROUTE      GET /fruits/:id/edit     (edit)
+// ROUTE      GET /meats/:id/edit     (edit)
 const showEditView = (req, res) => {
     Meat.findById(req.params.id, (err, foundMeat) => {
         if (err) {
@@ -62,7 +62,7 @@ const showEditView = (req, res) => {
     })
 }
 
-// ROUTE       GET /fruits/seed      (seed)
+// ROUTE       GET /meats/seed      (seed)
 const seedStarterData = (req, res) => {
     Meat.deleteMany({}, (err, deletedMeats) => {
         if (err) {
@@ -79,8 +79,20 @@ const seedStarterData = (req, res) => {
     })
 }
 
+// ROUTE       GET /meats/clear     (clear)
+const clearMeatData = (req, res) => {
+    // Delete all remaining documents (if there are any)
+    Meat.deleteMany({}, (err, deletedMeats) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/meats/')
+        }
+    })
+}
 
-// ROUTE     GET /fruits/:id     (show)
+
+// ROUTE     GET /meats/:id     (show)
 const showOneMeat = (req, res) => {
    Meat.findById(req.params.id, (err, foundMeat) => {
         if(err) {
@@ -101,5 +113,6 @@ module.exports = {
     createNewMeat,
     showEditView,
     showOneMeat,
+    clearMeatData,
     seedStarterData  
 }

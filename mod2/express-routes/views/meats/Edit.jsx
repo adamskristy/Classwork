@@ -7,7 +7,7 @@ class Edit extends React.Component {
         let { meat } = this.props
 
         return (
-            <DefaultLayout title="edit a meat" foodGroup="meats">
+            <DefaultLayout title="edit a meat" foodGroup="Meats">
                 <h1>Edit Page</h1>
                 <form action={`/meats/${meat._id}?_method=PUT`} method="POST">
 

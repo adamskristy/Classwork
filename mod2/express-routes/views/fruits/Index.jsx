@@ -17,7 +17,7 @@ class Index extends React.Component {
         ////how to render a list of data onto page
 
         return ( // have to return a single parent element, cannot give siblings, wrap in one parent element
-            <DefaultLayout title="All Fruit" foodGroup="fruits">
+            <DefaultLayout title="All Fruit" foodGroup="Fruits">
                 {/* title and foodgroup are passed as props since they are attributes of DefaultLayout */}
                     <div>
                         <h1>Fruits Index Page</h1>

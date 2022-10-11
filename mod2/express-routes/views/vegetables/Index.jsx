@@ -1,21 +1,22 @@
 const React = require('react')
+const DefaultLayout = require('../layouts/DefaultLayout')
 
 class Index extends React.Component {
     render () {
 
-        // Object Destructuring
+        
         const { vegetables } = this.props;
     
 
-        return ( // have to return a single parent element, cannot give siblings, wrap in one parent element
-            <div>
+        return ( 
+            <DefaultLayout title="All Veggies" foodGroup="Vegetables">
                 <h1>Vegetables Index Page</h1>
                 
-                <ul>
-                    {vegetables.map((vegetables, i)=> {
+                <ul id="vegetables-index">
+                    {vegetables?.map((vegetables)=> {
                         return (
-                            <li key = {i}>
-                                The <a href={`/vegetables/${i}`}> {vegetables.name}</a> is {vegetables.color}
+                            <li key = {vegetables._id}>
+                                The <a href={`/vegetables/${vegetables._id}`}> {vegetables.name}</a> is {vegetables.color}
                             </li>
                         )
                     })}
@@ -23,7 +24,7 @@ class Index extends React.Component {
                 <nav>
                     <a href ='/vegetables/new'>Create a new vegetable</a>
                 </nav>
-            </div>
+            </DefaultLayout>
         )
     }
 }

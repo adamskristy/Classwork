@@ -41,7 +41,7 @@ const updateOneFruit =  (req,res) => {
 
     console.log(req.body);
 
-    if(req.body.readyToEat === "on"){
+    if(req.body.readyToEat === "on" || req.body.readyToEat === true ){
         req.body.readyToEat = true
     } else{
         req.body.readyToEat = false
@@ -112,6 +112,18 @@ const seedStarterData = (req, res) => {
         })
     }
 
+    // ROUTE       GET /fruits/clear     (clear)
+const clearFruitData = (req, res) => {
+    // Delete all remaining documents (if there are any)
+    Fruit.deleteMany({}, (err, deletedFruits) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/fruits/')
+        }
+    })
+}
+
 // ROUTE     GET /fruits/:id     (show)
 const showOneFruit = (req, res) => {
     // res.send(fruits[req.params.index]);
@@ -138,6 +150,8 @@ module.exports = {
     updateOneFruit,
     createNewFruit,
     showEditView,
+    seedStarterData,
+    clearFruitData,
     showOneFruit,
-    seedStarterData  
+      
 }

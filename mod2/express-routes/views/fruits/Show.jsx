@@ -11,9 +11,9 @@ class Show extends React.Component {
         return (
             //have to wrap in one parent element
 
-            <DefaultLayout title ={`${name} details`} foodGroup = "fruits">
+            <DefaultLayout title ={`${name} details`} foodGroup = "Fruits">
                 <div>
-                    <h1>Show Page</h1>
+                    <h1>Show {`${name}`} Page</h1>
                         <p>The {name} is {color}</p>
                         <p>{readyToEat? 'Its is ready to eat' : 'It is not ready to eat... Cant touch this' }</p>
 

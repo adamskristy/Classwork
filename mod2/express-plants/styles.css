@@ -1,0 +1,71 @@
+body {
+    <<<<<<< HEAD
+        font-family: 'Courier New', Courier, monospace;   
+        background-color:#3399ff;
+    =======
+        font-family: 'Courier New', Courier, monospace;
+    >>>>>>> 223464df3fde6db5c9f5c13ee270dae0ff8e2626
+    }
+    
+    .container{
+        /* outline: 1px solid brown; */
+        width: 500px;
+        height: 300px;
+        
+    }
+    
+    fieldset {
+        width: 500px;
+        height: 300px;
+    }
+    
+    input[type="text"] {
+        width: 200px;
+    }
+    
+    textarea {
+        resize: none;
+        vertical-align: top;
+      }
+    <<<<<<< HEAD
+    
+    #logs-index{
+       /* background-color: greenyellow; */
+       width: 500px;
+       /* height: 200px; */
+    }
+    
+    h1 {
+        color: darkblue;
+    }
+      
+      ul {
+        background: #3399ff;
+        padding: 20px;
+      }
+    
+      
+      ul li {
+        background: #cce5ff;
+        color: darkblue;
+        margin: 5px;
+      }
+    
+      #show-btns{
+        display: flex;
+        justify-content: space-around;
+        width: 250px;
+      }
+      
+      button {
+        width: 40px;
+      }
+    
+      a:hover {
+        color:blue;
+        text-decoration: solid;
+        font-weight: bold;
+      }
+    =======
+    >>>>>>> 223464df3fde6db5c9f5c13ee270dae0ff8e2626
+    

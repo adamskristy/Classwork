@@ -1,0 +1,17 @@
+body {
+    color:beige;
+    background-color: lightseagreen;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#fruits-index {
+    font-size: 20px;  
+}
+
+#meats-index {
+    font-size: 20px;  
+}
+
+#vegetables-index {
+    font-size: 20px;
+}
