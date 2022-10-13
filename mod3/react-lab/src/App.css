@@ -1,0 +1,15 @@
+ul {
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+    line-height: 30%;
+}
+
+li{
+    padding-bottom: 10px;
+}
+
+.app{
+    display: flex;
+    flex-direction: row;
+}
