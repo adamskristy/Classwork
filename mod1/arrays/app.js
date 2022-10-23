@@ -15,32 +15,38 @@ console.log(learners[0]) //prints first item in array
 
 learners[0] = 'Bob' //replacing the first value 'Kristy' with 'Bob'
 console.log(learners)
+//'Bob', 'Sami', 'Eon'
 
 //find out length of array
 console.log(learners.length) //how many values are in the array
-
+// 3
 
 //PUSH method, adds to end of the array
 learners.push('John')
 console.log(learners)
+//'Kristy', 'Sami', 'Eon', 'John'
 
 //POP method, removes last value
 learners.pop()
 console.log(learners)
+//'Kristy', 'Sami'
 
 ///SHIFT method, removes first value of array
 learners.shift()
 console.log(learners)
+// 'Sami', 'Eon'
 
 //UNSHIFT method, insert new element at start of array
 learners.unshift('Will')
 console.log(learners)
+//''Will', Kristy', 'Sami', 'Eon'
 
 
-//SPREAD operator, expand array, joing seperate arrays into new one
+//SPREAD operator, expand array, joining seperate arrays into new one
 //spread two arrays into one
 
 let instructors = ['Teo', 'Jade', 'Rixio']
+//// let learners = ['Kristy', 'Sami', 'Eon']
 
 let everybody = [...learners, ...instructors]
 console.log(everybody)
