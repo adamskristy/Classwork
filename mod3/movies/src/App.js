@@ -3,12 +3,15 @@ import './App.css';
 import Form from './components/Form';
 import MovieDisplay from './components/MovieDisplay';
 
+//let init = false;
+
 function App() {
   
   //variable with api key
-  const apiKey = 'c24f7a83'
+  const apiKey = process.env.REACT_APP_API
 
-  //state to hold movie data
+  //state to hold movie data, store data in parent so children can access
+  //[initial state, function to change state]
   let [movie, setMovie] = useState('')
 
   //function to get Movies
@@ -32,7 +35,7 @@ function App() {
       //take response and format to json
       const data = await response.json()
       console.log(data);
-      setMovie(data)
+      setMovie(data) //takes time to work
 
     }catch(err){ // if an error, log it
       console.log(err)
@@ -41,17 +44,29 @@ function App() {
   }
 
   //will run the first time app runs, refresh page  
+  //function to run, array of dependencies
+  //anytime item in [] changes, the code in function will run
   useEffect(() => {
-    let movies = ['The fifth element', 'To Wong Foo, Thanks for Everything! Julie Newmar', 'Blade']
-    const random = Math.floor(Math.random() * movies.length)
-    getMovie(movies[random])
+    getMovie(movie)
   }, []) 
+
+  // useEffect(() => {
+  //   if (!init) { //stop logging data twice
+  //   getMovie('Clueless')
+  //   console.log('testing')
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   let movies = ['The fifth element', 'To Wong Foo, Thanks for Everything! Julie Newmar', 'Blade']
+  //   const random = Math.floor(Math.random() * movies.length)
+  //   getMovie(movies[random])
+  // }, []) 
+
 
   return (
     <div className="App">
-      
-      <MovieDisplay movie={movie}/>
-      <Form getMovie={getMovie} />
+     
     </div>
   );
 }

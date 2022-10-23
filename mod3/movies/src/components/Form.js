@@ -4,8 +4,7 @@ export default function Form({getMovie}){
 
 let [movieName, setMovieName ] = useState('')
 
-
-
+//handleChange - updates formData when we type into form
 const handleChange = (e) => {
     setMovieName(e.target.value)
 }
@@ -18,14 +17,20 @@ const handleSubmit = (e) => {
     getMovie(movieName)
 }
 
+useEffect(() => {
+    console.log(getMovie('godfather' ))
+
+},[])
+
     return(
 
     <div>
         <form onSubmit={handleSubmit}>
+            <br />
             <input 
                 type="text" 
                 value={movieName} 
-                onChange={handleChange}
+                onChange={handleChange} 
                 
             />
             <input type="submit" value="Submit" />

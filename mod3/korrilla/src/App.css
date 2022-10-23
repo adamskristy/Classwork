@@ -1,0 +1,11 @@
+.receipts {
+    outline: 1px solid red;
+    width: 300px;
+    padding: 10px;
+}
+
+.orders {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
