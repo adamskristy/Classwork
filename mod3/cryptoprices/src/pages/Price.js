@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 export default function Price (props) {
 
-    const apiKey = "C42D7824-432D-449B-9E49-A138F9C907C7"
+    const apiKey = process.env.REACT_APP_API_KEY
     const params = useParams()
     const symbol = params.symbol
 

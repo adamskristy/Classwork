@@ -1,7 +1,7 @@
 import { useState } from "react"
  
 
-export default function Counter(props){
+export default function CounterCalc(props){
 
     // expecting initial state value
     const countState = useState(0);
@@ -13,26 +13,41 @@ export default function Counter(props){
 
     // can also do this array destructure
     let [count, setCount] = useState(0)
+    let [number, setNumber] = useState("")
 
     const handleIncrement = () => {
-        setCount(count + 1)
+        setCount(Number(number) + count)
     }
 
     const handleDecrement = () => {
-        setCount(count - 1)
+        setCount(Number(number) - count)
+    }
+
+    const handleSquaring = () => {
+        setCount(Number(number) * count)
+    }
+
+    const handleDividing = () => {
+        setCount(Number(number) / count)
     }
 
     //anonymous function alterntive
     //<button onClick={() => setCount(count + 1)}>+</button>
 
+    const handleChange = (e) => {
+        console.log('number');
+        setNumber(e.target.value)
+    }
 
     return(
         <>
             <span>Current Count: {count}</span>
             <section>
-                <input type="text" /><br />
+                <input type="text" value={number} onChange={handleChange} /><br />
                 <button onClick={handleIncrement}>+</button>
                 <button onClick={handleDecrement}>-</button>
+                <button onClick={handleSquaring}>*</button>
+                <button onClick={handleDividing}>/</button>
             </section>
         </>
     )

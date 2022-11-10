@@ -4,10 +4,12 @@ import GiphyDisplay from './components/GiphyDisplay';
 
 function App() {
 
+  const apiKey = process.env.REACT_APP_API_KEY;
+
   let [giphy, setGiphy] = useState('')
 
   const getGiphy = async () => {
-    const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=offKS7YxDD9DWPJUWVOyj1qZ03JByNJK&tag=&rating=g`)
+    const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=&rating=g`)
     const data = await response.json()
     //console.log(data)
     setGiphy(data.data)
